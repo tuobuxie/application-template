@@ -11,3 +11,10 @@ spring:
     database: mysql
     show-sql: true
 
+client:
+  http:
+    connection-request-timeout: 10
+    default-max-per-route: 50
+    max-total: 200
+    socket-timeout: 3000
+    connect-timeout: 1000
