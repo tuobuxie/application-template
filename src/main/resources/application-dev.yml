@@ -1,0 +1,13 @@
+server:
+  port: 8013
+spring:
+  datasource:
+    url: jdbc:mysql://172.20.2.131:3506/eu_posp_settle?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: loan
+    password: JLpaymysql8.0!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    continue-on-error: true
+  jpa:
+    database: mysql
+    show-sql: true
+
