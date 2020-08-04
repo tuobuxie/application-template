@@ -10,6 +10,24 @@ spring:
   jpa:
     database: mysql
     show-sql: true
+  sleuth:
+    sampler:
+      probability: 1
+    messaging:
+      enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - info
+          - health
+          - prometheus
+  endpoint:
+    health:
+      show-details: always
+    prometheus:
+      enabled: true
 
 client:
   http:
