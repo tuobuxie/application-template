@@ -1,3 +1,19 @@
 spring:
-  profiles:
-    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.0.236:8848
+  application:
+    name: tddata-core
+  datasource:
+    url: jdbc:mysql://192.168.0.236:3306/tddata?zeroDateTimeBehavior=convertToNull&tinyInt1isBit=false&characterEncoding=UTF-8&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: tdapp
+    password: Td123456!
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+mybatis:
+  mapper-locations: classpath:mapper/*
